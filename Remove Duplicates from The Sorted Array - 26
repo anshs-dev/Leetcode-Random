@@ -1,0 +1,13 @@
+class Solution {
+public:
+    int removeDuplicates(vector<int>& nums) {
+        set<int>news;
+        for(int n:nums)
+        news.insert(n);
+        int len=news.size();
+        nums.clear();
+        for(int s:news)
+        nums.push_back(s);
+        return len;
+    }
+};
